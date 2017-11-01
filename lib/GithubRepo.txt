@@ -1,0 +1,209 @@
+  1  ls
+    2  ls -a
+    3  mkdir unixstuff
+    4  ls
+    5  cd unixstuff
+    6  ls -a
+    7  mkdir backups
+    8  pwd
+    9  ls unixstuff
+   10  ls backups
+   11  ls unixstuff/backups
+   12  ls ~/unixstuff
+   13  ls ~
+   14  ls ~/..
+   15  cp science.txt science.bak
+   16  mkdir tempstuff
+   17  rmdir tempstuff
+   18  mkdir tempstuff
+   19  ls
+   20  rmdir tempstuff
+   21  ls
+   22  cat science.txt
+   23  less science.txt
+   24  head science.txt
+   25  head -5 science.txt
+   26  tail science.txt
+   27  less science.txt /science
+   28  grep science science.txt
+   29  grep Science science.txt
+   30  grep -i science science.txt
+   31  grep -i 'spinning top' science.txt
+   32  grep -ivc science science.txt
+   33  wc -w science.txt
+   34  wc -l science.txt
+   35  cat > list2
+   36  cat list2
+   37  cat >> list1
+   38  cat list2
+   39  cat list2
+   40  cat list1
+   41  cat list1 list2 > biglist
+   42  cat biglist
+   43  sort
+   44  sort < biglist
+   45  sort < biglist > slist
+   46  who
+   47  cat list1 list2 | grep p | sort
+   48  ls list*
+   49  ls *list
+   50  ls ?list
+   51  man wc
+   52  whatis wc
+   53  apropos keyword
+   54  apropos copy
+   55  ls -l
+   56  chmod go-rwx biglist
+   57  chmod a+rw biglist
+   58  chmod go-rwx science.txt
+   59  chmod a+rw science.txt
+   60  ls -l
+   61  ps
+   62  sleep 10
+   63  sleep 10 &
+   64  sleep 1000
+   65  bg
+   66  jobs
+   67  fg %jobnumber
+   68  fg
+   69  fg %1
+   70  sleep 100
+   71  kill %jobnumber
+   72  sleep 100 &
+   73  jobs
+   74  kill %4
+   75  kill
+   76  sleep 1000 &
+   77  ps
+   78  kill 11940
+   79  mkdir hello
+   80  cd helo
+   81  cd hello
+   82  touch hello.rb
+   83  git init
+   84  git add hello.rb
+   85  ls
+   86  it commit -m "First Commit"
+   87  git add hello.rb
+   88  it commit -m "First Commit"
+   89  ls -a
+   90  rm -rf .git/
+   91  git init
+   92  git add hello.rb
+   93  git commit -m "First Commit"
+   94  git status
+   95  git add hello.rb
+   96  git status
+   97  git commit
+   98  git status
+   99  git add hello.rb
+  100  git status
+  101  git commit -m "Added a default value"
+  102  git status
+  103  git add .
+  104  git status
+  105  git commit -m "Added a comment"
+  106  git log
+  107  git log --pretty=oneline
+  108  git log --pretty=oneline --max-count=2
+  109  git log --pretty=oneline --since='5 minutes ago'
+  110  git log --pretty=oneline --until='5 minutes ago'
+  111  git log --pretty=oneline --author=<your name>
+  112  git log --pretty=oneline --all
+  113  git log --all --pretty=format:'%h %cd %s (%an)' --since='7 days ago'
+  114  git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  115  go <branch>
+  116  git hist
+  117  git checkout <hash>
+  118  cat hello.rb
+  119  git checkout master
+  120  cat hello.rb
+  121  git tag v1
+  122  git checkout v1^
+  123  git tag v1-beta
+  124  git checkout v1
+  125  git checkout v1-beta
+  126  git tag
+  127  git hist master --all
+  128  git checkout master
+  129  git status
+  130  git checkout hello.rb
+  131  git status
+  132  cat hello.rb
+  133  git add hello.rb
+  134  git status
+  135  git reset HEAD hello.rb
+  136  git checkout hello.rb
+  137  git status
+  138  git add hello.rb
+  139  git commit -m "Oops, we didn't want this commit"
+  140  git revert HEAD
+  141  git hist
+  142  git tag oops
+  143  git reset --hard v1
+  144  git hist
+  145  git hist --all
+  146  git tag -d oops
+  147  git hist --all
+  148  git add hello.rb
+  149  git commit -m "Add an author comment"
+  150  git add hello.rb
+  151  git commit --amend -m "Add an author/email comment"
+  152  git hist
+  153  mkdir lib
+  154  git mv hello.rb lib
+  155  git status
+  156  git commit -m "Moved hello.rb to lib"
+  157  gem install rake
+  158  git add Rakefile
+  159  touch  Rakefile
+  160  git add Rakefile
+  161  git commit -m "Added a Rakefile."
+  162  rake
+  163  ls -C .git
+  164  ls -C .git/objects
+  165  ls -C .git/objects/<dir>
+  166  cat .git/config
+  167  ls .git/refs
+  168  ls .git/refs/heads
+  169  ls .git/refs/tags
+  170  cat .git/refs/tags/v1
+  171  cat .git/HEAD
+  172  git hist --max-count=1
+  173  git cat-file -t <hash>
+  174  git cat-file -p <hash>
+  175  git cat-file -p <treehash>
+  176  git cat-file -p <libhash>
+  177  git cat-file -p <rbhash>
+  178  git checkout -b greet
+  179  git status
+  180  touch lib/greeter.rb
+  181  git add lib/greeter.rb
+  182  git commit -m "Added greeter class"
+  183  git add lib/hello.rb
+  184  git commit -m "Hello uses Greeter"
+  185  git add Rakefile
+  186  git commit -m "Updated Rakefile"
+  187  git hist --all
+  188  git checkout master
+  189  cat lib/hello.rb
+  190  git checkout greet
+  191  cat lib/hello.rb
+  192  git checkout master
+  193  touch README
+  194  git add README
+  195  git commit -m "Added README"
+  196  git hist --all
+  197  git checkout greet
+  198  git merge master
+  199  git hist --all
+  200  git checkout master
+  201  cd ..
+  202  cd sample files.2
+  203* 
+  204  cd samplefiles.zip
+  205  unzip
+  206  ls
+  207  samplefiles.zip
+  208  unzip
+  209  history
